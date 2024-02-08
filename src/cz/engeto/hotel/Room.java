@@ -1,4 +1,4 @@
-package cz.engeto.ukol_lekce02_hotel;
+package cz.engeto.hotel;
 
 import java.math.BigDecimal;
 
@@ -54,4 +54,5 @@ public class Room {
     public void setPricePerNight(BigDecimal pricePerNight) {
         this.pricePerNight = pricePerNight;
     }
+
 }

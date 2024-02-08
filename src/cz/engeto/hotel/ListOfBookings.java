@@ -1,4 +1,4 @@
-package cz.engeto.ukol_lekce02_hotel;
+package cz.engeto.hotel;
 
 public class ListOfBookings {
     private int bookingNumber;

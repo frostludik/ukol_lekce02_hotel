@@ -1,7 +1,9 @@
-package cz.engeto.ukol_lekce02_hotel;
+package cz.engeto.hotel;
 
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Guest {
     private String name, surname;
@@ -11,6 +13,15 @@ public class Guest {
         this.name = name;
         this.surname = surname;
         this.birthDate = birthDate;
+    }
+
+    public String getFormattedDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d.M.yyyy");
+        return birthDate.format(formatter);
+    }
+
+    public String getDescription() {
+        return name+" "+surname+" (birthdate: "+getFormattedDate()+")";
     }
 
     public String getName() {
