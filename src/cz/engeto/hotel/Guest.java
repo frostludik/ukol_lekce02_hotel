@@ -20,7 +20,7 @@ public class Guest {
         return birthDate.format(formatter);
     }
 
-    public String getNameAndSurname() {
+    public String getNameAndSurnameWithBirthdate() {
         return name+" "+surname+" (birthdate: "+getFormattedDate()+")";
     }
 
@@ -55,7 +55,7 @@ public class Guest {
         if(name == null) {
             return "no other guest";
         } else {
-            return name+" "+surname;
+            return getNameAndSurnameWithBirthdate();
         }
     }
 }
