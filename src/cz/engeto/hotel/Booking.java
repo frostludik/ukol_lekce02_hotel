@@ -19,7 +19,7 @@ public class Booking {
         this.dateTo = dateTo;
         this.isVacation = isVacation;
     }
-
+    //no need to add additional guests
     public Booking(Room room, Guest guest, LocalDate dateFrom, LocalDate dateTo, boolean isVacation) {
         this.room = room;
         this.guest = guest;
@@ -29,6 +29,7 @@ public class Booking {
         this.isVacation = isVacation;
     }
 
+    //adding additional guests in a list
     public void addGuest(Guest guest) {
         if (otherGuests == null) {
             otherGuests = new ArrayList<>();
