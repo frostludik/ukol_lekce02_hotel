@@ -2,6 +2,7 @@ import cz.engeto.hotel.Booking;
 import cz.engeto.hotel.Guest;
 import cz.engeto.hotel.Room;
 
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class Main {
         guestsList.add(guest2);
 
         for (Guest guest : guestsList) {
-            System.out.println(guest.getDescription());
+            System.out.println(guest.getNameAndSurname());
         }
 
         Room room1 = new Room(
@@ -50,12 +51,9 @@ public class Main {
         Booking booking1 = new Booking(room1, guest1, null, LocalDate.of(2021, 7, 19),
                 LocalDate.of(2021, 7, 26), true);
 
-        List<Guest> otherGuests = new ArrayList<>(); //temp solution
-        otherGuests.add(guest2);
-        Booking booking2 = new Booking(room3, guest1, otherGuests, LocalDate.of(2021, 9, 1),
+        Booking booking2 = new Booking(room3, guest1, new ArrayList<>(), LocalDate.of(2021, 9, 1),
                 LocalDate.of(2021, 9, 14), true);
-
-
+        booking2.addGuest(guest2);
 
 
         List<Booking> bookingsList = new ArrayList<>();
@@ -69,7 +67,8 @@ public class Main {
             +" To: "+booking.getDateTo()+", type of stay: "+vacationOrBusiness);
         }
     }
+
 }
 
-
+//booking.getOtherGuests()
 

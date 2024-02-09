@@ -1,6 +1,7 @@
 package cz.engeto.hotel;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Booking {
@@ -19,12 +20,19 @@ public class Booking {
         this.isVacation = isVacation;
     }
 
+    public void addGuest(Guest guest) {
+        if (otherGuests == null) {
+            otherGuests = new ArrayList<>();
+        }
+        otherGuests.add(guest);
+    }
+
     public int getRoom() {
         return room.getRoomNumber();
     }
 
     public String getGuest() {
-        return guest.getDescription();
+        return guest.getNameAndSurname();
     }
 
     public List<Guest> getOtherGuests() {
@@ -66,4 +74,6 @@ public class Booking {
     public void setVacation(boolean vacation) {
         isVacation = vacation;
     }
+
+
 }

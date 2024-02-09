@@ -20,9 +20,10 @@ public class Guest {
         return birthDate.format(formatter);
     }
 
-    public String getDescription() {
+    public String getNameAndSurname() {
         return name+" "+surname+" (birthdate: "+getFormattedDate()+")";
     }
+
 
     public String getName() {
         return name;
@@ -46,5 +47,15 @@ public class Guest {
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
+    }
+
+
+    @Override
+    public String toString() {
+        if(name == null) {
+            return "no other guest";
+        } else {
+            return name+" "+surname;
+        }
     }
 }
