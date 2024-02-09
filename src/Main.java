@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println("----GUESTS-----------------------------------------------------------------------------");
         for (Guest guest : guestsList) {
-            System.out.println(guest.getNameAndSurname());
+            System.out.println(guest.getNameAndSurnameWithBirthdate());
         }
 
 
