@@ -20,9 +20,11 @@ public class Main {
         guestsList.add(guest1);
         guestsList.add(guest2);
 
+        System.out.println("----GUESTS-----------------------------------------------------------------------------");
         for (Guest guest : guestsList) {
             System.out.println(guest.getNameAndSurname());
         }
+
 
         Room room1 = new Room(
                 1, 1, true,
@@ -41,12 +43,14 @@ public class Main {
         roomsList.add(room2);
         roomsList.add(room3);
 
+        System.out.println("----ROOMS------------------------------------------------------------------------------");
         for (Room room : roomsList) {
             String balconyAvailability = room.isHasBalcony() ? "with balcony" : "no balcony";
             String seaViewAvailability = room.isHasSeaView() ? "with seaview" : "without seaview";
             System.out.println("Room Nr." + room.getRoomNumber() + ", " + room.getNumberOfBeds() + " bed, "
                     + balconyAvailability + ", " + seaViewAvailability + ", price per night: " + room.getPricePerNight() + " CZK.");
         }
+
 
         Booking booking1 = new Booking(room1, guest1, LocalDate.of(2021, 7, 19),
                 LocalDate.of(2021, 7, 26), true);
@@ -60,6 +64,7 @@ public class Main {
         bookingsList.add(booking1);
         bookingsList.add(booking2);
 
+        System.out.println("----BOOKINGS---------------------------------------------------------------------------");
         for (Booking booking : bookingsList) {
             String vacationOrBusiness = booking.isVacation() ? "Vacation" : "Business";
             System.out.println("Room "+booking.getRoom()+", main guest: "+booking.getGuest()
