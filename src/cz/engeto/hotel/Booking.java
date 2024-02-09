@@ -42,7 +42,7 @@ public class Booking {
     }
 
     public String getGuest() {
-        return guest.getNameAndSurname();
+        return guest.getNameAndSurnameWithBirthdate();
     }
 
     public List<Guest> getOtherGuests() {
