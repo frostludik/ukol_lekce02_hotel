@@ -48,7 +48,7 @@ public class Main {
                     + balconyAvailability + ", " + seaViewAvailability + ", price per night: " + room.getPricePerNight() + " CZK.");
         }
 
-        Booking booking1 = new Booking(room1, guest1, null, LocalDate.of(2021, 7, 19),
+        Booking booking1 = new Booking(room1, guest1, LocalDate.of(2021, 7, 19),
                 LocalDate.of(2021, 7, 26), true);
 
         Booking booking2 = new Booking(room3, guest1, new ArrayList<>(), LocalDate.of(2021, 9, 1),
@@ -70,5 +70,5 @@ public class Main {
 
 }
 
-//booking.getOtherGuests()
+
 

@@ -20,6 +20,15 @@ public class Booking {
         this.isVacation = isVacation;
     }
 
+    public Booking(Room room, Guest guest, LocalDate dateFrom, LocalDate dateTo, boolean isVacation) {
+        this.room = room;
+        this.guest = guest;
+        this.otherGuests = new ArrayList<>();
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.isVacation = isVacation;
+    }
+
     public void addGuest(Guest guest) {
         if (otherGuests == null) {
             otherGuests = new ArrayList<>();
